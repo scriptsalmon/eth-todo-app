@@ -1,7 +1,9 @@
+import Web3 from 'web3';
+
 App = {
     load: async () => {
         await App.loadWeb3()
-        await App.loadAccount()
+        // await App.loadAccount()
         console.log("app loading...")
     },
     loadWeb3: async () => {
@@ -11,7 +13,7 @@ App = {
         } else {
           window.alert("Please connect to Metamask.")
         }
-        // Modern dapp browsers...
+        // Modern dapp browsers...ç
         if (window.ethereum) {
           window.ethereum = new Web3(ethereum)
           try {
@@ -36,10 +38,11 @@ App = {
         }
       },
 
-    loadAccount: async () => {
-        App.account = web3.eth.accounts[0];
-        console.log(App.account);
-    }
+
+    // loadAccount: async () => {
+    //     App.account = web3.eth.accounts[0];
+    //     console.log(App.account);
+    // }
 }
 
 $(() => {
